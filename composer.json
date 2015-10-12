@@ -1,0 +1,28 @@
+{
+    "name": "trump27/buibaker",
+    "description": "Theme for Bootstrap3",
+    "type": "cakephp-plugin",
+    "homepage": "https://github.com/trump27/buibaker",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "trump27",
+            "role": "Author"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.16",
+        "cakephp/cakephp": "~3.0",
+        "friendsofcake/bootstrap-ui": "~0.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "BuiBaker\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BuiBaker\\Test\\": "tests"
+        }
+    }
+}

@@ -1,0 +1,100 @@
+@import 'compass';
+
+$color-title:#be140b;
+
+h1,h2,h3,h4,h5,h6,legend {
+	color: $color-title;
+}
+
+.required > label {
+	font-weight: bold;
+}
+
+.required > label:after {
+	content: ' *';
+	color: #C3232D;
+}
+
+// view
+.vertical-table {
+  vertical-align: middle;
+  th {
+	// color: #1798A5;
+	border: none;
+	text-align: left;
+	width: 30%;
+  }
+  td {
+	text-align: left; //right;
+  }
+}
+footer {
+	padding: 10px 30px;
+}
+$sidebar-width: 200px;
+
+.contents {
+	padding-left: $sidebar-width;
+	position: relative;
+}
+
+.main-content {
+	width: 100%;
+	padding: 15px 30px;
+}
+
+// .content {
+// 	padding-left: 15px;
+// 	padding-right: 15px;
+// }
+
+.subnav {
+	padding-top: 15px;
+}
+.sidebar {
+	margin-left: - $sidebar-width;
+	left: $sidebar-width;
+	width: $sidebar-width;
+	position: fixed;
+	height: 100%;
+	z-index: 1001;
+	background: #333;
+	a {
+		text-decoration: none;
+    	display: block;
+	}
+	.brand {
+		margin-top: 50px;
+		padding-left: 10px;
+		font-size: 24px;
+		background-color: darken(#C3232D,12%);
+		color: #ccc;
+		height: 60px;
+		line-height: 60px;
+	}
+	ul {
+		padding: 20px 0;
+	}
+	li {
+		height: 30px;
+		line-height: 30px;
+		padding-left: 20px;
+		@include background-image(linear-gradient(top, darken(#464349,8%), darken(#3e3b41,8%)));
+		.glyphicon {
+			margin-right: 0.5em;
+		}
+		&:hover {
+			background: rgba(255, 255, 255, 0.2);
+			.glyphicon {
+				color: #5bc0de;
+			}
+		}
+		a {
+			color: #aaa;
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}
+

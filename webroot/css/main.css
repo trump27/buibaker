@@ -1,0 +1,94 @@
+h1, h2, h3, h4, h5, h6, legend {
+  color: #be140b;
+}
+
+.required > label {
+  font-weight: bold;
+}
+
+.required > label:after {
+  content: ' *';
+  color: #C3232D;
+}
+
+.vertical-table {
+  vertical-align: middle;
+}
+.vertical-table th {
+  border: none;
+  text-align: left;
+  width: 30%;
+}
+.vertical-table td {
+  text-align: left;
+}
+
+footer {
+  padding: 10px 30px;
+}
+
+.contents {
+  padding-left: 200px;
+  position: relative;
+}
+
+.main-content {
+  width: 100%;
+  padding: 15px 30px;
+}
+
+.subnav {
+  padding-top: 15px;
+}
+
+.sidebar {
+  margin-left: -200px;
+  left: 200px;
+  width: 200px;
+  position: fixed;
+  height: 100%;
+  z-index: 1001;
+  background: #333;
+}
+.sidebar a {
+  text-decoration: none;
+  display: block;
+}
+.sidebar .brand {
+  margin-top: 50px;
+  padding-left: 10px;
+  font-size: 24px;
+  background-color: #8f1a21;
+  color: #ccc;
+  height: 60px;
+  line-height: 60px;
+}
+.sidebar ul {
+  padding: 20px 0;
+}
+.sidebar li {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 20px;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMyMmYzNCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzJhMjgyYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #322f34), color-stop(100%, #2a282c));
+  background-image: -moz-linear-gradient(top, #322f34, #2a282c);
+  background-image: -webkit-linear-gradient(top, #322f34, #2a282c);
+  background-image: linear-gradient(to bottom, #322f34, #2a282c);
+}
+.sidebar li .glyphicon {
+  margin-right: 0.5em;
+}
+.sidebar li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.sidebar li:hover .glyphicon {
+  color: #5bc0de;
+}
+.sidebar li a {
+  color: #aaa;
+}
+.sidebar li a:hover {
+  color: #fff;
+}
