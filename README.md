@@ -16,16 +16,16 @@ Composerで追加
 composer require trump27/buibaker
 ```
 
-プラグイン追加
+プラグイン追加 `bootstrap.php`
 
-```
+```php
 Plugin::load('BootstrapUI');
 Plugin::load('BuiBaker');
 ```
 
 BootstrapUIのプラグイン読み込み `src\View\AppView`
 
-```
+```php
 public $layout = 'BuiBaker.default';
 
 public function initialize()
@@ -40,7 +40,7 @@ public function initialize()
 model, controllerを作成後、templateをbake
 
 ```
-$ bin/cake bake.bake [subcommand] -t BuiBaker
+$ bin/cake bake template [template_name] -t BuiBaker
 ```
 ## ライセンス
 
