@@ -23,7 +23,7 @@ Plugin::load('BootstrapUI');
 Plugin::load('BuiBaker');
 ```
 
-BootstrapUIのプラグイン読み込み `src\View\AppView`
+BootstrapUIのHelper読み込み `src\View\AppView`
 
 ```php
 public $layout = 'BuiBaker.default';
