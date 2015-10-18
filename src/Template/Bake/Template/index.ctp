@@ -21,7 +21,7 @@ $fields = collection($fields)
     ->take(7);
 %>
 <div class="subnav">
-    <ul class="subitem list-inline">
+    <ul class="subnavitems list-inline">
         <li><?= $this->Html->link(__('New <%= $singularHumanName %>'), ['action' => 'add'], ['class'=>'btn btn-sm btn-primary']) ?></li>
 <%
     $done = [];
@@ -43,8 +43,8 @@ $fields = collection($fields)
 %>
     </ul>
 </div>
-<div class="<%= $pluralVar %> index content">
-    <h3><?= __('<%= $pluralHumanName %>') ?></h3>
+<div class="<%= $pluralVar %> index content panel panel-default">
+    <div class="panel-heading"><?= __('<%= $pluralHumanName %>') ?></div>
     <table class="table">
         <thead>
             <tr>

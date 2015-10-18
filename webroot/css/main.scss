@@ -6,6 +6,16 @@ h1,h2,h3,h4,h5,h6,legend {
 	color: $color-title;
 }
 
+// index
+div.paginator {
+	padding: 0px 20px;
+}
+
+// form
+.form fieldset {
+	padding: 15px 20px;
+}
+
 .required > label {
 	font-weight: bold;
 }
@@ -16,6 +26,9 @@ h1,h2,h3,h4,h5,h6,legend {
 }
 
 // view
+div.view {
+	padding: 15px;
+}
 .vertical-table {
   vertical-align: middle;
   th {
@@ -28,6 +41,12 @@ h1,h2,h3,h4,h5,h6,legend {
 	text-align: left; //right;
   }
 }
+
+div.related {
+	padding: 20px;
+}
+
+
 footer {
 	padding: 10px 30px;
 }

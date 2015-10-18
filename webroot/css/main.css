@@ -2,6 +2,14 @@ h1, h2, h3, h4, h5, h6, legend {
   color: #be140b;
 }
 
+div.paginator {
+  padding: 0px 20px;
+}
+
+.form fieldset {
+  padding: 15px 20px;
+}
+
 .required > label {
   font-weight: bold;
 }
@@ -9,6 +17,10 @@ h1, h2, h3, h4, h5, h6, legend {
 .required > label:after {
   content: ' *';
   color: #C3232D;
+}
+
+div.view {
+  padding: 15px;
 }
 
 .vertical-table {
@@ -21,6 +33,10 @@ h1, h2, h3, h4, h5, h6, legend {
 }
 .vertical-table td {
   text-align: left;
+}
+
+div.related {
+  padding: 20px;
 }
 
 footer {

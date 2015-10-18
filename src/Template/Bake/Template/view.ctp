@@ -52,7 +52,7 @@ $groupedFields += ['number' => [], 'string' => [], 'boolean' => [], 'date' => []
 $pk = "\$$singularVar->{$primaryKey[0]}";
 %>
 <div class="subnav">
-    <ul class="subitem list-inline">
+    <ul class="subnavitems list-inline">
         <li><?= $this->Html->link(__('Edit <%= $singularHumanName %>'),
             ['action' => 'edit', <%= $pk %>],
             ['class'=>'btn btn-sm btn-primary']) ?> </li>
@@ -85,10 +85,10 @@ $pk = "\$$singularVar->{$primaryKey[0]}";
 %>
     </ul>
 </div>
-<div class="<%= $pluralVar %> view content">
-    <div class="row">
-        <h3><?= h($<%= $singularVar %>-><%= $displayField %>) ?></h3>
-    </div>
+<div class="panel panel-default">
+  <div class="panel-heading"><?= __('<%= $singularHumanName %>') ?></div>
+  <div class="<%= $pluralVar %> view content">
+    <h3><?= h($<%= $singularVar %>-><%= $displayField %>) ?></h3>
     <table class="table vertical-table">
 <% if ($groupedFields['string']) : %>
 <% foreach ($groupedFields['string'] as $field) : %>
@@ -134,12 +134,14 @@ $pk = "\$$singularVar->{$primaryKey[0]}";
     </table>
 <% if ($groupedFields['text']) : %>
 <% foreach ($groupedFields['text'] as $field) : %>
-    <div class="row">
+    <div class="rowtext">
         <h4><?= __('<%= Inflector::humanize($field) %>') ?></h4>
         <?= $this->Text->autoParagraph(h($<%= $singularVar %>-><%= $field %>)); ?>
     </div>
 <% endforeach; %>
 <% endif; %>
+  </div>
+</div>
 <%
 $relations = $associations['HasMany'] + $associations['BelongsToMany'];
 foreach ($relations as $alias => $details):
@@ -173,4 +175,4 @@ foreach ($relations as $alias => $details):
     <?php endif; ?>
     </div>
 <% endforeach; %>
-</div>
+

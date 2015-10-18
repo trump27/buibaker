@@ -20,7 +20,7 @@ $fields = collection($fields)
     });
 %>
 <div class="subnav">
-    <ul class="subitem list-inline">
+    <ul class="subnavitems list-inline">
 <% if (strpos($action, 'add') === false): %>
         <li><?= $this->Form->postLink(
                 __('Delete'),
@@ -52,10 +52,10 @@ $fields = collection($fields)
 %>
     </ul>
 </div>
-<div class="<%= $pluralVar %> form content">
+<div class="<%= $pluralVar %> form content panel panel-default">
+    <div class="panel-heading"><?= __('<%= Inflector::humanize($action) %> <%= $singularHumanName %>') ?></div>
     <?= $this->Form->create($<%= $singularVar %>,['novalidate' => true]) ?>
     <fieldset>
-        <legend><?= __('<%= Inflector::humanize($action) %> <%= $singularHumanName %>') ?></legend>
         <?php
 <%
         foreach ($fields as $field) {
@@ -97,7 +97,7 @@ $fields = collection($fields)
         }
 %>
         ?>
-    </fieldset>
     <?= $this->Form->button(__('Submit'), ['class' => 'btn-primary']) ?>
+    </fieldset>
     <?= $this->Form->end() ?>
 </div>
