@@ -1,60 +1,14 @@
 @import 'compass';
 
 $color-title:#be140b;
-
-h1,h2,h3,h4,h5,h6,legend {
-	color: $color-title;
-}
-
-// index
-div.paginator {
-	padding: 0px 20px;
-}
-
-// form
-.form fieldset {
-	padding: 15px 20px;
-}
-
-.required > label {
-	font-weight: bold;
-}
-
-.required > label:after {
-	content: ' *';
-	color: #C3232D;
-}
-
-// view
-div.view {
-	padding: 15px;
-}
-.vertical-table {
-  vertical-align: middle;
-  th {
-	// color: #1798A5;
-	border: none;
-	text-align: left;
-	width: 30%;
-  }
-  td {
-	text-align: left; //right;
-  }
-}
-
-div.related {
-	padding: 20px;
-}
-
-
-footer {
-	padding: 10px 30px;
-}
+$brand-height: 65px;
 $sidebar-width: 200px;
+$active-glyphicon-color: lighten(#2e6da4,24%);
 
-.contents {
+#contents {
 	padding-left: $sidebar-width;
 	position: relative;
+	transition: all 0.4s ease 0s;
 }
 
 .main-content {
@@ -62,15 +16,60 @@ $sidebar-width: 200px;
 	padding: 15px 30px;
 }
 
-// .content {
-// 	padding-left: 15px;
-// 	padding-right: 15px;
-// }
-
 .subnav {
 	padding-top: 15px;
 }
-.sidebar {
+
+footer {
+	padding: 10px 30px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color: $color-title;
+}
+
+// index
+.index > .paginator {
+	padding: 0px 20px;
+}
+
+// form
+.form fieldset {
+	padding: 15px 20px;
+}
+.required > label {
+	font-weight: bold;
+}
+.required > label:after {
+	content: ' *';
+	color: #C3232D;
+}
+
+// view
+.panel .view {
+	padding: 15px;
+}
+.vertical-table {
+  vertical-align: middle;
+  th {
+	border: none;
+	text-align: left;
+	width: 30%;
+  }
+  td {
+	text-align: left;
+  }
+}
+div.related {
+	padding: 20px;
+}
+
+// side menu
+
+#menu-toggle {
+	display: none;
+}
+#sidebar {
 	margin-left: - $sidebar-width;
 	left: $sidebar-width;
 	width: $sidebar-width;
@@ -78,34 +77,47 @@ $sidebar-width: 200px;
 	height: 100%;
 	z-index: 1001;
 	background: #333;
+	transition: all 0.4s ease 0s;
 	a {
 		text-decoration: none;
     	display: block;
 	}
 	.brand {
-		margin-top: 50px;
+		margin-top: 35px;
+        margin-bottom: 25px;
 		padding-left: 10px;
 		font-size: 24px;
-		background-color: darken(#C3232D,12%);
+		@include background-image(linear-gradient(top, darken(#C3232D, 12%), darken(#C3232D, 18%)));
 		color: #ccc;
-		height: 60px;
-		line-height: 60px;
+		height: $brand-height;
+		line-height: $brand-height;
+        a {
+            color: #ccc;
+        }
 	}
 	ul {
-		padding: 20px 0;
+		padding: 0;
 	}
 	li {
-		height: 30px;
-		line-height: 30px;
+		height: 35px;
+		line-height: 35px;
 		padding-left: 20px;
-		@include background-image(linear-gradient(top, darken(#464349,8%), darken(#3e3b41,8%)));
+		@include background-image(linear-gradient(top, #464349, #3e3b41));
 		.glyphicon {
 			margin-right: 0.5em;
+		}
+		&.active {
+			.glyphicon {
+				color: $active-glyphicon-color;
+            }
+            > a {
+                color: #fff;
+            }
 		}
 		&:hover {
 			background: rgba(255, 255, 255, 0.2);
 			.glyphicon {
-				color: #5bc0de;
+				color: $active-glyphicon-color;
 			}
 		}
 		a {
@@ -117,3 +129,23 @@ $sidebar-width: 200px;
 	}
 }
 
+@media (max-width: 767px) {
+    #contents {
+		padding-left: 0;
+	}
+	#sidebar {
+		left: 0;
+	}
+	#contents.active {
+		position: relative;
+        left: $sidebar-width;
+    }
+	#contents.active #sidebar {
+		left: $sidebar-width;
+		width: $sidebar-width;
+		transition: all 0.4s ease 0s;
+	}
+	#menu-toggle {
+		display: inline-block;
+	}
+}
